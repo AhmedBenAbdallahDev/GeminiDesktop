@@ -1,6 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
+Dockerfile
+compose.yml
 /node_modules
 /.pnp
 .pnp.*
@@ -9,6 +11,7 @@
 !.yarn/plugins
 !.yarn/releases
 !.yarn/versions
+
 
 # testing
 /coverage
@@ -31,10 +34,6 @@ yarn-debug.log*
 yarn-error.log*
 .pnpm-debug.log*
 
-# env files (can opt-in for committing if needed)
-.env
-.env.*
-!.env.example
 
 # vercel
 .vercel
@@ -53,5 +52,5 @@ local-data
 .cursor
 *.ignore
 .mcp-config.json
-custom-mcp-server/ipfs/blocks
-custom-mcp-server/orbitdb
+.next
+.changeset
