@@ -1,5 +1,9 @@
 import type { NextConfig } from "next";
 import createNextIntlPlugin from "next-intl/plugin";
+
+// Create the next-intl plugin with the request configuration path
+const withNextIntl = createNextIntlPlugin("./src/i18n/request.ts");
+
 export default () => {
   const nextConfig: NextConfig = {
     cleanDistDir: true,
@@ -12,6 +16,6 @@ export default () => {
       NEXT_PUBLIC_GITHUB_CLIENT_ID: process.env.GITHUB_CLIENT_ID,
     },
   };
-  const withNextIntl = createNextIntlPlugin();
+
   return withNextIntl(nextConfig);
 };
